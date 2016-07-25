@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度舆情</title>
+  <link rel="stylesheet" href="css/public.css">
+
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+</head>
+
+<body>
+<div class="nav">
+  <div class="navinner">
+      <div class="logo"><a href=""></a></div>
+      <div class="navleft">
+        <div><a href="javascript:;" style="opacity:0.5">首页</a></div>
+        <div><a href="javascript:;">产品介绍</a></div>
+        <div><a href="javascript:;">用户版</a></div>
+      </div>
+      <div class="navright">
+        <div><a href="javascript:;">登录</a></div>
+        <div class="yiji">
+          <a href="javascript:;">手机客户端</a>
+          <div class="erji">
+          </div>
+        </div>
+        <div><a href="javascript:;">百度司南</a> </div>
+        <div><a href="javascript:;">联系我们</a></div>
+        <div><a href="javascript:;" style="color:#e7c36e">申请试用</a></div>
+      </div>
+  </div>
+</div>
+
+<div id="dowebok">
+	<div class="section">
+	   <div class="zhe"></div>	
+       <img src="images/cloud1.png" alt="" class="cloud1">
+       <img src="images/cloud2.png" alt="" class="cloud2">
+       <img src="images/cloud3.png" alt="" class="cloud3">
+       <div class="inner">
+       	 <div class="flight"><img src="images/flight.png" alt="" ></div>
+       	 <div class="ship"><img src="images/ship.png" alt="" ></div>
+       	 <div class="down"><img src="images/down.png" alt=""></div>
+       	 <div class="baidu"><img src="images/baidu.png" alt=""></div>
+       	 <div class="bin1"><img src="images/bin1.png" alt=""></div>
+       	 <div class="bin2"><img src="images/bin2.png" alt=""></div>
+       	 <div class="bin3"><img src="images/bin3.png" alt=""></div>
+       	 
+         <div class="table">
+               <div class="users">
+                 <span></span>
+                 <input type="text" value="用户名">
+               </div>
+                <div class="pw">
+                 <span></span>
+                 <input type="text" value="密码">
+               </div>
+               <div class="yz">
+                 <input type="text" value="验证码">
+                 <img src="images/yzm.png" alt="">
+                 <span>换一张</span>
+               </div>
+               <div class="login">
+                 登录
+               </div>
+               <div class="bottom">
+                     <div class="anquan">
+                        安全控件常见问题
+                     </div>
+                     <div class="forget">
+                         忘记密码
+                    </div>
+               </div>
+               
+         </div>
+       </div>
+	</div>
+	<div class="section">
+    <div class="inner">
+      <div class="left">
+          <img src="images/lx.png" alt="">
+          <div class="msg">
+             <h4>数据收集与处理</h4>
+              <p class="con">
+                15年专业数据收集与语义分析技术积累
+                卓越极致，不断攀登
+              </p>
+          </div>   
+      </div>        
+      <div class="right"><img src="images/right1.png" alt=""></div>
+      <div class="down"><img src="images/down.png" alt=""></div>
+      <div class="square1 square"></div>
+      <div class="square2 square"></div>
+      <div class="square3 square"></div>
+      <div class="square4 square"></div>
+      <div class="square5 square"></div>
+    </div>
+	</div>
+	<div class="section">
+       <div class="bottom3"><img src="images/bottom3.png" alt=""></div>
+      <div class="inner">
+      <div class="left">
+          <img src="images/qm.png" alt="">
+          <div class="msg">
+             <h4>舆情分析逻辑与架构</h4>
+              <p class="con">
+                声量诊断、传播分析、情感提炼、受众画像
+                有方法论，更有智慧
+              </p>
+          </div>   
+      </div>        
+      <div class="right"><img src="images/right2.png" alt=""></div>
+      <div class="down"><img src="images/down.png" alt=""></div>
+      <div class="kuai1"></div>
+      <div class="kuai2"></div>
+      <div class="kuai3"></div>
+      <div class="kuai4"></div>
+      <div class="kuai5"></div>
+
+    </div>
+	</div>
+	<div class="section">
+    <div class="banquan">© 2014 Baidu <a href="javascript:;">使用百度前必读</a></div>
+      <div class="inner">
+      <div class="left">
+          <img src="images/zy.png" alt="">
+          <div class="msg">
+             <h4>专业数据可视化</h4>
+              <p class="con">
+                非凡的数据洞悉和可视化能力
+                精研数据，惊艳所见
+              </p>
+          </div>   
+      </div>        
+      <div class="right"><img src="images/right3.png" alt=""></div>
+      <div class="yuan"><img src="images/yuan.png" alt=""></div>
+    </div>
+	</div>
+</div>
+
+</body>
+<script>
+	$("#dowebok").fullpage({
+        navigation: true,
+        navigationTooltips:["登录百度舆情","领先：数据收集与处理","全面：舆情分析逻辑与架构","专业：专业数据可视化"],
+        afterLoad:function(section,index){
+            $(".section").removeClass("active").eq(index-1).addClass("active");  
+        }
+    
+	})
+
+  $(".down").click(function(){
+      $.fn.fullpage.moveSectionDown();
+    })
+</script>
+</html>
